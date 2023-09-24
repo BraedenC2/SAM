@@ -1,0 +1,194 @@
+JFDML JFormDesigner: "8.1.1.0.298" Java: "17.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp SwitchPanel::l:::x}"
+			"$verticalGroup": "par l {comp SwitchPanel::l:::x}"
+		} ) {
+			name: "MainFrame"
+			"visible": true
+			"defaultCloseOperation": 3
+			"resizable": false
+			"title": "SAM"
+			"preferredSize": new java.awt.Dimension( 800, 450 )
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/Introduction.png" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+				name: "SwitchPanel"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {comp lockScreen::t:::x}"
+					"$verticalGroup": "par l {comp lockScreen::l::0:x}"
+				} ) {
+					name: "lockPanel"
+					"background": sfield java.awt.Color darkGray
+					"verifyInputWhenFocusTarget": false
+					add( new FormContainer( "javax.swing.JLayeredPane", new FormLayoutManager( class javax.swing.JLayeredPane ) ) {
+						name: "lockScreen"
+						"verifyInputWhenFocusTarget": false
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "passwordError"
+							"horizontalAlignment": 0
+							"foreground": new java.awt.Color( 255, 0, 0, 255 )
+							"font": new java.awt.Font( "Inter", 2, 14 )
+						}, new FormLayoutConstraints( null ) {
+							"x": 335
+							"y": 270
+							"width": 430
+							"height": 25
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "logInButton"
+							"text": "Log in"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "logIn", true ) )
+						}, new FormLayoutConstraints( null ) {
+							"x": 70
+							"y": 295
+							"height": 25
+							"width": 240
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "samLogo"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/Introduction.png" )
+							"verifyInputWhenFocusTarget": false
+						}, new FormLayoutConstraints( null ) {
+							"location": new java.awt.Point( 295, 430 )
+							"x": 85
+							"y": 25
+						} )
+						add( new FormComponent( "javax.swing.JPasswordField" ) {
+							name: "passwordField"
+							"background": new java.awt.Color( 255, 255, 255, 255 )
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+							"verifyInputWhenFocusTarget": false
+						}, new FormLayoutConstraints( null ) {
+							"x": 70
+							"y": 270
+							"width": 240
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "signInLogo"
+							"text": "Securely Sign In"
+							"foreground": new java.awt.Color( 0, 0, 0, 255 )
+							"horizontalAlignment": 0
+							"font": new java.awt.Font( "Microsoft Sans Serif", 0, 16 )
+							"verifyInputWhenFocusTarget": false
+						}, new FormLayoutConstraints( null ) {
+							"x": 70
+							"y": 220
+							"width": 240
+							"height": 25
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "backgroundImage"
+							"text": "text"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/BackgroundWelcome.png" )
+							"verifyInputWhenFocusTarget": false
+						}, new FormLayoutConstraints( null ) {
+							"width": 798
+							"height": 415
+							"x": 0
+							"y": 0
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card1"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {par t:::p {seq {space :::x, comp back_button:::p:92:p, space :::p, comp userBox2:::p:571:p, space u:::p, comp enter_button2:::p:95:p}, seq l {space :::p, comp label6:::p:776:p}}, space :::x}}"
+					"$verticalGroup": "par l {seq {space :::p, comp label6:::p:290:p, space :::x, par t {comp enter_button2::t:p:90:p, comp back_button:::p:91:p, comp userBox2::l:p:89:p}, space :::x}}"
+				} ) {
+					name: "convertPanel"
+					"background": new java.awt.Color( 102, 102, 102, 255 )
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "userBox2"
+						"wrapStyleWord": true
+						"toolTipText": "Input Text"
+						"font": &Font0 new java.awt.Font( "Monospaced", 0, 18 )
+						"border": &TitledBorder0 new javax.swing.border.TitledBorder( new javax.swing.border.BevelBorder( 0, null, null, null, null ), "User", 5, 4, null, new java.awt.Color( 255, 255, 255, 255 ) )
+						"background": &Color0 new java.awt.Color( 51, 51, 51, 255 )
+						"lineWrap": true
+						"foreground": &Color1 new java.awt.Color( 255, 255, 255, 255 )
+						"caretColor": &Color2 new java.awt.Color( 204, 204, 204, 255 )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "enter_button2"
+						"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 0, "/Enter_Button_Icon.png" )
+						"borderPainted": false
+						"focusPainted": false
+						"contentAreaFilled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "enter_button", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "enter_button2", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"autoscrolls": true
+						"font": &Font1 new java.awt.Font( "Inter", 0, 14 )
+						"border": &TitledBorder1 new javax.swing.border.TitledBorder( new javax.swing.border.CompoundBorder( new javax.swing.border.BevelBorder( 1, null, new java.awt.Color( 51, 51, 51, 255 ), null, null ), null ), "SAM", 1, 3, new java.awt.Font( "Inter", 1, 13 ), new java.awt.Color( 255, 255, 255, 255 ) )
+						"background": &Color3 new java.awt.Color( 51, 51, 51, 255 )
+						"text": "When interacting with SAM, please ensure you use correct spelling and proper grammar."
+						"toolTipText": "SAM Output"
+						"verticalAlignment": 1
+						"foreground": &Color4 new java.awt.Color( 255, 255, 255, 255 )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "back_button"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/back_button_icon.png" )
+						"borderPainted": false
+						"focusPainted": false
+						"contentAreaFilled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "enter_button", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "back_button", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card3"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp label5:::::x, seq {comp scrollPane1:::::x, space :::p, comp enter_button:::p:95:p}}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp label5:::p:290:p, space :::p, par l {comp scrollPane1::::91:x, seq {comp enter_button:::p:90:p, space :0:1:x}}, space :::p}}"
+				} ) {
+					name: "chatPanel"
+					"background": new java.awt.Color( 102, 102, 102, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"autoscrolls": true
+						"font": #Font1
+						"border": #TitledBorder1
+						"background": #Color3
+						"text": "When interacting with SAM, please ensure you use correct spelling and proper grammar."
+						"toolTipText": "SAM Output"
+						"verticalAlignment": 1
+						"foreground": #Color4
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "userBox"
+							"wrapStyleWord": true
+							"toolTipText": "Input Text"
+							"font": #Font0
+							"border": #TitledBorder0
+							"background": #Color0
+							"lineWrap": true
+							"foreground": #Color1
+							"caretColor": #Color2
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "enter_button"
+						"icon": #SwingIcon0
+						"borderPainted": false
+						"focusPainted": false
+						"contentAreaFilled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "enter_button", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card2"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 45, 0 )
+			"size": new java.awt.Dimension( 790, 430 )
+		} )
+	}
+}
